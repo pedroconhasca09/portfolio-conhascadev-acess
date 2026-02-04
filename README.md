@@ -2,7 +2,8 @@
 
 Este é o repositório do meu portfólio pessoal, uma página web estática desenvolvida para apresentar minha trajetória profissional, habilidades técnicas e projetos como desenvolvedor.
 
-<img width="1918" height="915" alt="Captura de tela 2026-02-02 113012" src="https://github.com/user-attachments/assets/a37c5aec-f4f9-4da0-a1ee-546225577078" />
+<img width="1913" height="893" alt="image" src="https://github.com/user-attachments/assets/a7132898-a3bb-4603-b608-07295f0ab5ea" />
+
 
 
 👤 Sobre Mim
