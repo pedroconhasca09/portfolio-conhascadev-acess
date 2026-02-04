@@ -1,4 +1,4 @@
-📝 Portfólio Estático - Pedro Conhasca
+📝 Portfólio - Pedro Conhasca
 
 Este é o repositório do meu portfólio pessoal, uma página web desenvolvida para apresentar minha trajetória profissional, habilidades técnicas e projetos como desenvolvedor. O projeto foi recentemente reestruturado com foco em **Acessibilidade**, **UX/UI Moderno (Neon/Cyberpunk)** e **Clean Code**.
 
