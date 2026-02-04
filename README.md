@@ -1,4 +1,4 @@
-📝 Portfólio Estático 
+📝 Portfólio Pedro Conhasca  
 
 Este é o repositório do meu portfólio pessoal, uma página web estática desenvolvida para apresentar minha trajetória profissional, habilidades técnicas e projetos como desenvolvedor.
 
