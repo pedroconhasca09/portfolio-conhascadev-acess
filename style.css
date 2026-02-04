@@ -1,20 +1,24 @@
+/* Importação de fontes futuristas (Orbitron para títulos, Exo 2 para textos) */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Orbitron:wght@400;500;700&display=swap');
+
 /* Estilos globais do corpo da página */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fontes */
+    font-family: 'Exo 2', sans-serif; /* Fonte moderna e tecnológica para o corpo */
     margin: 0; /* Remove a margem padrão */
     padding: 0; /* Remove o preenchimento padrão */
     display: flex; /* Habilita o layout flexbox */
     flex-direction: column; /* Organiza os itens em coluna */
     min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da viewport */
-    background: linear-gradient(135deg, #1a1a1a, #2c3e50); /* Adiciona um fundo gradiente */
-    color: #f4f4f9; /* Define a cor do texto principal */
+    background: linear-gradient(135deg, #050505, #121212); /* Fundo escuro profundo para contraste neon */
+    color: #e0e0e0; /* Define a cor do texto principal */
 }
 
 /* Estilos do cabeçalho */
 header {
-    background: linear-gradient(90deg, #2c3e50, #4b6cb7); /* Fundo gradiente para o cabeçalho */
+    background: #0a0a0a; /* Fundo escuro sólido */
     padding: 1rem 2rem; /* Preenchimento interno */
-    border-bottom: 2px solid #4b6cb7; /* Borda inferior */
+    border-bottom: 2px solid #00f3ff; /* Borda inferior Neon Ciano */
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3); /* Brilho neon */
 }
 
 /* Esconde o checkbox do menu mobile */
@@ -42,6 +46,8 @@ nav ul {
 
 /* Estilos dos links de navegação */
 nav a {
+    font-family: 'Orbitron', sans-serif; /* Fonte futurista para navegação */
+    letter-spacing: 1px;
     color: #fff; /* Cor do texto */
     text-decoration: none; /* Remove o sublinhado */
     font-weight: bold; /* Texto em negrito */
@@ -53,7 +59,9 @@ nav a {
 
 /* Efeito hover para os links de navegação */
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo ao passar o mouse */
+    background-color: transparent;
+    color: #00f3ff; /* Texto Neon Ciano */
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.8); /* Brilho no texto */
 }
 
 /* Estilos do conteúdo principal */
@@ -80,15 +88,18 @@ main {
 
 /* Estilos do título da seção de biografia */
 .bio-section h1 {
+    font-family: 'Orbitron', sans-serif; /* Fonte futurista para títulos */
+    letter-spacing: 2px;
     text-align: center; /* Alinha o texto ao centro */
 }
 
 /* Estilos da caixa de texto da biografia */
 .bio-text {
-    border: 2px solid #4b6cb7; /* Borda */
+    border: 1px solid #bd00ff; /* Borda Neon Roxo */
     padding: 1rem; /* Preenchimento */
     border-radius: 8px; /* Bordas arredondadas */
-    background: linear-gradient(135deg, #2c3e50, #4b6cb7); /* Fundo gradiente */
+    background: rgba(20, 20, 25, 0.6); /* Fundo escuro semi-transparente */
+    box-shadow: 0 0 15px rgba(189, 0, 255, 0.15); /* Brilho suave */
 }
 
 /* Estilos dos parágrafos na caixa de texto */
@@ -108,21 +119,22 @@ main {
 
 /* Estilos dos links na caixa de texto */
 .bio-text a {
-    color: #a6c1ee; /* Cor do link */
+    color: #00f3ff; /* Cor do link Neon Ciano */
     text-decoration: none; /* Remove o sublinhado */
     transition: color 0.3s; /* Transição de cor suave */
 }
 
 /* Efeito hover para os links na caixa de texto */
 .bio-text a:hover {
-    color: #fff; /* Cor do link ao passar o mouse */
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #fff;
+    text-shadow: 0 0 8px #00f3ff; /* Brilho ao passar o mouse */
+    text-decoration: none;
 }
 
 /* Estilos dos ícones na caixa de texto */
 .bio-text i {
     margin-right: 10px; /* Margem à direita */
-    color: #a6c1ee; /* Cor do ícone */
+    color: #bd00ff; /* Ícone Neon Roxo */
 }
 
 /* Estilos da seção da foto */
@@ -136,8 +148,8 @@ main {
 /* Estilos do wrapper da imagem (para a borda gradiente) */
 .img-wrapper {
     padding: 4px; /* Espaçamento para criar a borda */
-    background: linear-gradient(135deg, #4b6cb7, #2c3e50); /* Fundo gradiente */
-    border-radius: 14px; /* Bordas arredondadas */
+    background: linear-gradient(135deg, #00f3ff, #bd00ff); /* Gradiente Neon */
+    border-radius: 50%; /* Bordas arredondadas (Circular) */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
     display: inline-block; /* Comportamento de bloco em linha */
 }
@@ -146,19 +158,21 @@ main {
 .photo-section img {
     max-width: 100%; /* Largura máxima responsiva */
     height: auto; /* Altura automática */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 50%; /* Bordas arredondadas (Circular) */
     max-height: 300px; /* Altura máxima */
     display: block; /* Garante que a imagem não tenha espaços extras */
+    aspect-ratio: 1 / 1; /* Garante proporção quadrada */
+    object-fit: cover; /* Ajusta a imagem dentro do círculo */
 }
 
 /* Estilos do rodapé */
 footer {
-    background: linear-gradient(90deg, #2c3e50, #4b6cb7); /* Fundo gradiente */
-    color: #fff; /* Cor do texto */
+    background: #0a0a0a; /* Fundo escuro */
+    color: #e0e0e0; /* Cor do texto */
     text-align: center; /* Texto centralizado */
     padding: 1rem; /* Preenchimento */
     margin-top: auto; /* Empurra o rodapé para o final da página */
-    border-top: 2px solid #4b6cb7; /* Borda superior */
+    border-top: 1px solid #bd00ff; /* Borda superior Neon Roxo */
 }
 
 /* Media Queries para responsividade (telas de até 768px) */
@@ -221,105 +235,458 @@ footer {
     }
 }
 
-/* --- Estilos do Carrossel --- */
+/* --- Estilos da Timeline (Trajetória) e Layout Vertical --- */
 
-/* Contêiner principal do carrossel */
-.carousel-container {
-    position: relative; /* Necessário para posicionar os botões de navegação */
-    max-width: 100%;
-    margin: auto; /* Centraliza o carrossel */
+/* Layout específico para a página de currículo (vertical) */
+main.resume-layout {
+    flex-direction: column; /* Empilha as seções verticalmente */
+    align-items: center;
+    gap: 4rem;
 }
 
-/* Estilos de cada slide */
-.carousel-slide {
-    display: none; /* Oculto por padrão */
-    text-align: center; /* Centraliza o conteúdo do slide */
-    padding: 20px 40px; /* Preenchimento */
+main.resume-layout .bio-section {
+    max-width: 1200px; /* Aumenta a largura para acomodar o layout lado a lado */
+    width: 100%;
 }
 
-/* Estilos das imagens no slide */
-.carousel-slide img {
-    height: 120px; /* Altura fixa para harmonia visual */
-    width: auto;
-    max-width: 100%;
-    object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
-    margin-bottom: 1rem; /* Margem inferior */
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
-    padding: 10px; /* Preenchimento ao redor da imagem */
-    border-radius: 8px; /* Bordas arredondadas */
+/* Contêiner da Timeline */
+.timeline {
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Estilos dos títulos (h3) no slide */
-.carousel-slide h3 {
+/* Linha vertical da timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Centraliza a linha */
+    transform: translateX(-50%);
+    width: 4px;
+    background: #00f3ff; /* Linha Neon Ciano */
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.5); /* Brilho na linha */
+}
+
+/* Item individual da timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    width: 50%; /* Ocupa metade da largura */
+}
+
+/* Itens ímpares (Esquerda) */
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+    padding-right: 40px; /* Espaço para a linha central */
+    text-align: right; /* Alinha conteúdo à direita (opcional, para estilo) */
+}
+
+/* Itens pares (Direita) */
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    padding-left: 40px; /* Espaço para a linha central */
+    text-align: left;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Ponto (marcador) da timeline */
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border: 3px solid #bd00ff; /* Borda do ponto Neon Roxo */
+    border-radius: 50%;
+    z-index: 2;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+/* Posicionamento do ponto para itens ímpares (na direita do box) */
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -16px; /* (24px + 8px borda)/2 = 16px para centralizar na linha */
+    left: auto;
+}
+
+/* Posicionamento do ponto para itens pares (na esquerda do box) */
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -16px;
+}
+
+/* Efeito hover no item destaca o ponto */
+.timeline-item:hover .timeline-dot {
+    background-color: #bd00ff; /* Preenchimento ao passar o mouse */
+    border-color: #fff;
+    box-shadow: 0 0 15px #bd00ff; /* Brilho intenso */
+    transform: scale(1.2);
+}
+
+/* Conteúdo do card da timeline */
+.timeline-content {
+    background: rgba(20, 20, 25, 0.8); /* Fundo escuro */
+    border: 1px solid #00f3ff; /* Borda Neon Ciano */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Necessário para o z-index no hover */
+    text-align: left; /* Mantém o texto interno legível (alinhado à esquerda) */
+}
+
+/* Efeito de destaque ao passar o mouse (Ressaltar na tela) */
+.timeline-content:hover {
+    transform: scale(1.05); /* Aumenta levemente o card */
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.4); /* Sombra neon intensa */
+    z-index: 10; /* Traz o elemento para frente */
+}
+
+/* Cabeçalho do card (Imagem, Título, Data) */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Inverte o cabeçalho nos itens da esquerda para ficar mais harmônico */
+.timeline-item:nth-child(odd) .timeline-header {
+    flex-direction: row-reverse;
+}
+
+.timeline-title-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Inverte o grupo de título nos itens da esquerda */
+.timeline-item:nth-child(odd) .timeline-title-group {
+    flex-direction: row-reverse;
+}
+
+.timeline-title-group img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.timeline-title-group h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 1.3rem;
     color: #fff;
-    margin-top: 0;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra no texto para legibilidade */
 }
 
-/* Estilos dos parágrafos no slide */
-.carousel-slide p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #e0e0e0; /* Cor de texto mais suave */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra no texto */
-    text-align: center; /* Texto centralizado */
+.timeline-date {
+    font-family: 'Orbitron', sans-serif; /* Fonte digital para datas */
+    background-color: rgba(0, 243, 255, 0.1);
+    color: #00f3ff; /* Data Neon Ciano */
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-/* Estilos das listas não ordenadas no slide */
-.carousel-slide ul {
-    list-style: none; /* Remove os marcadores padrão */
-    padding: 0;
-    text-align: left; /* Alinha o texto da lista à esquerda */
-    margin-top: 1rem; /* Margem superior */
-}
-
-/* Estilos dos itens da lista no slide */
-.carousel-slide li {
-    margin-bottom: 0.5rem; /* Margem inferior entre os itens */
-    font-size: 1rem;
-    line-height: 1.5;
+/* Texto do card */
+.timeline-content p {
+    margin: 0 0 0.5rem 0;
     color: #e0e0e0;
-    position: relative; /* Necessário para o pseudo-elemento ::before */
-    padding-left: 1.5rem; /* Espaço para o marcador personalizado */
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
 
-/* Marcador personalizado para os itens da lista */
-.carousel-slide li::before {
-    content: '▶'; /* Define o conteúdo do marcador */
+.timeline-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #e0e0e0;
+}
+
+.timeline-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Botão Voltar ao Topo */
+#back-to-top {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: #bd00ff; /* Fundo Neon Roxo */
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 0 10px #bd00ff;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#back-to-top:hover {
+    background-color: #00f3ff; /* Muda para Ciano no hover */
+    color: #000;
+    box-shadow: 0 0 15px #00f3ff;
+    transform: scale(1.1);
+}
+
+/* --- Estilos para as novas seções de Cursos e Habilidades --- */
+
+/* Estilos para listas informativas (Cursos e Habilidades) */
+.bio-text ul.info-list {
+    list-style: none; /* Remove marcadores padrão */
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.bio-text ul.info-list li {
+    position: relative;
+    padding-left: 1.5rem; /* Espaço para o ícone */
+    margin-bottom: 0.8rem; /* Espaçamento entre itens */
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+/* Ícone personalizado para os itens da lista */
+.bio-text ul.info-list li::before {
+    content: '▶';
     position: absolute;
     left: 0;
-    color: #a6c1ee; /* Cor do marcador */
+    top: 4px;
+    color: #00f3ff; /* Ícone da lista Neon Ciano */
+    text-shadow: 0 0 5px #00f3ff;
     font-size: 0.8rem;
-    top: 5px; /* Ajuste vertical */
 }
 
-/* Estilos dos botões de navegação do carrossel (anterior/próximo) */
-.prev, .next {
-    cursor: pointer;
+/* Layout em colunas para a lista de habilidades */
+.bio-text ul.skills-list {
+    column-count: 2; /* Duas colunas */
+    column-gap: 2rem; /* Espaço entre colunas */
+}
+
+/* Responsividade para a lista de habilidades */
+@media (max-width: 768px) {
+    .bio-text ul.skills-list {
+        column-count: 1; /* Uma coluna em telas pequenas */
+    }
+}
+
+/* --- Acessibilidade (ABNT / WCAG) --- */
+
+/* Link "Pular para o conteúdo" (Visível apenas ao receber foco do teclado) */
+.skip-link {
     position: absolute;
-    top: 40%; /* Alinhamento vertical */
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
+    top: -100px;
+    left: 10px;
+    background: #00f3ff; /* Neon Ciano para destaque */
+    color: #000;
+    padding: 10px 15px;
+    z-index: 9999;
+    text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 3px;
-    user-select: none; /* Impede a seleção do texto do botão */
+    border-radius: 0 0 5px 5px;
+    transition: top 0.3s;
+    font-family: 'Orbitron', sans-serif;
 }
 
-/* Posicionamento do botão "próximo" */
-.next { right: -10px; border-radius: 3px 0 0 3px; }
-/* Posicionamento do botão "anterior" */
-.prev { left: -10px; border-radius: 0 3px 3px 0; }
+.skip-link:focus {
+    top: 0; /* Aparece no topo ao ser focado */
+}
 
-/* Efeito hover para os botões de navegação */
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+/* Indicador de foco visível de alto contraste para navegação por teclado */
+:focus-visible {
+    outline: 2px solid #00f3ff;
+    outline-offset: 4px;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+}
 
-/* Animação de fade para a transição dos slides */
-.fade { animation-name: fade; animation-duration: 1.5s; }
+/* Respeita a preferência do usuário por redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 
-/* Keyframes da animação de fade */
-@keyframes fade { from {opacity: .4} to {opacity: 1} }
+/* --- Barra de Ferramentas de Acessibilidade --- */
+
+#accessibility-toolbar {
+    position: fixed;
+    left: 20px;
+    bottom: 100px; /* Acima do rodapé, lado esquerdo */
+    z-index: 10000;
+}
+
+#access-toggle {
+    background: #00f3ff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#access-toggle:hover {
+    transform: scale(1.1);
+}
+
+#access-menu {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    background: #0a0a0a;
+    border: 1px solid #00f3ff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+#access-menu.visible {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#access-menu button {
+    background: transparent;
+    border: 1px solid #bd00ff;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+#access-menu button:hover {
+    background: #bd00ff;
+    color: #000;
+}
+
+/* --- Modos de Acessibilidade --- */
+
+/* Alto Contraste (Fundo Branco, Texto Preto) */
+body.high-contrast {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+body.high-contrast * {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+}
+body.high-contrast a {
+    text-decoration: underline !important;
+    font-weight: bold;
+}
+
+/* Fonte Legível (Dislexia) */
+body.dyslexic-font, body.dyslexic-font * {
+    font-family: Verdana, Arial, sans-serif !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.8 !important;
+    word-spacing: 0.1em !important;
+}
+
+/* Texto Aumentado */
+body.large-font {
+    font-size: 120% !important;
+}
+
+/* Guia de Leitura */
+#reading-guide {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 0, 0.5); /* Amarelo semi-transparente */
+    z-index: 99999;
+    pointer-events: none;
+    display: none;
+    transform: translateY(-50%);
+}
+#reading-guide.active {
+    display: block;
+}
+
+/* Ajuste de visibilidade do Guia de Leitura no modo Alto Contraste */
+body.high-contrast #reading-guide {
+    background-color: #000000 !important; /* Preto sólido para contrastar com o fundo branco */
+}
+
+/* --- Responsividade da Timeline para Celulares --- */
+@media (max-width: 768px) {
+    /* Ajusta a linha vertical para a esquerda */
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    /* Ajusta os itens da timeline para largura total */
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    /* Reseta alinhamentos e preenchimentos para itens ímpares e pares */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        align-self: stretch;
+        text-align: left;
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    /* Ajusta a posição do ponto (marcador) */
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 7px; /* Centraliza no eixo da linha */
+        right: auto;
+    }
+
+    /* Reseta a direção do cabeçalho para itens ímpares */
+    .timeline-item:nth-child(odd) .timeline-header,
+    .timeline-item:nth-child(odd) .timeline-title-group {
+        flex-direction: row;
+    }
+}

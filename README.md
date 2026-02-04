@@ -1,6 +1,6 @@
-📝 Portfólio Estático 
+📝 Portfólio Estático - Pedro Conhasca
 
-Este é o repositório do meu portfólio pessoal, uma página web estática desenvolvida para apresentar minha trajetória profissional, habilidades técnicas e projetos como desenvolvedor.
+Este é o repositório do meu portfólio pessoal, uma página web estática desenvolvida para apresentar minha trajetória profissional, habilidades técnicas e projetos como desenvolvedor. O projeto foi recentemente reestruturado com foco em **Acessibilidade**, **UX/UI Moderno (Neon/Cyberpunk)** e **Clean Code**.
 
 <img width="1918" height="915" alt="Captura de tela 2026-02-02 113012" src="https://github.com/user-attachments/assets/a37c5aec-f4f9-4da0-a1ee-546225577078" />
 
@@ -10,15 +10,35 @@ Este é o repositório do meu portfólio pessoal, uma página web estática dese
 Olá! Sou o Pedro Conhasca, Desenvolvedor Fullstack em formação pela Universidade La Salle e estagiário na Fundação Municipal de Educação de Niterói.
 Sou movido por transformar problemas em soluções reais através do código. No dia a dia, trabalho com foco no ecossistema Python/Django e PHP/Laravel, além de construir interfaces responsivas com JavaScript, HTML e CSS.
 
+🎨 Identidade Visual e UX
+
+O design foi totalmente renovado para uma estética **Neon/Cyberpunk**, utilizando:
+- **Paleta de Cores:** Fundo dark com acentos em Ciano Neon (`#00f3ff`) e Roxo Neon (`#bd00ff`).
+- **Tipografia Futurista:** Fontes *Orbitron* (títulos) e *Exo 2* (textos) via Google Fonts.
+- **Interatividade:** Efeitos de hover, glow e animações suaves na timeline de trajetória profissional.
+- **Layout Responsivo:** Adaptação fluida para mobile e desktop, com menu hambúrguer e timeline responsiva.
+
+♿ Acessibilidade e Inclusão (ABNT / WCAG)
+
+Este projeto prioriza a inclusão digital, implementando recursos robustos de acessibilidade:
+- **Barra de Ferramentas de Acessibilidade:**
+  - 🌗 **Alto Contraste:** Alternância para tema preto e branco.
+  - 🔠 **Aumentar Texto:** Ajuste global de tamanho da fonte.
+  - 📖 **Fonte Legível:** Tipografia otimizada para dislexia (Verdana/Arial).
+  - 📏 **Guia de Leitura:** Linha auxiliar para foco na leitura.
+- **VLibras:** Widget de tradução automática para Língua Brasileira de Sinais.
+- **Navegação por Teclado:** Skip links ("Pular para o conteúdo") e indicadores de foco visíveis.
+- **Semântica HTML5:** Uso correto de tags para leitores de tela.
+
 🚀 Tecnologias Utilizadas
 
 O portfólio foi construído utilizando tecnologias web fundamentais para garantir performance e responsividade:
 
-HTML5: Estruturação semântica do conteúdo.
-
-CSS3: Estilização personalizada, layout responsivo e design moderno (Dark Mode).
-
-JavaScript: Interatividade e dinamismo na página.
+- **HTML5:** Estruturação semântica e acessível.
+- **CSS3:** Flexbox, Grid, Variáveis CSS, Animações e Media Queries.
+- **JavaScript (Vanilla):** Lógica centralizada em `function.js` para interatividade e acessibilidade.
+- **Font Awesome:** Ícones vetoriais.
+- **Google Fonts:** Tipografia web.
 
 🛠️ Habilidades Técnicas (Stack)
 
@@ -26,28 +46,27 @@ Além das tecnologias deste projeto, possuo experiência com:
 
 Backend: Python (Django), PHP (Laravel).
 
-Frontend: JavaScript, HTML5, CSS3.
+Frontend: JavaScript, HTML5, CSS3, Bootstrap.
 
-Bancos de Dados: PostgreSQL, MySQL.
+Bancos de Dados: PostgreSQL, MySQL, SQLite.
 
 Ferramentas: Git, GitHub, Docker.
 
 📁 Estrutura do Projeto
 
-O projeto está organizado de forma simples e direta:
+O projeto está organizado de forma simples e direta na raiz:
 
-index.html: Página principal contendo as seções "Sobre Mim", "Currículo" e "Contato".
-
-css/: Arquivos de folha de estilo.
-
-js/: Scripts de interatividade.
-
-img/: Assets e imagens utilizadas no site.
+- `index.html`: Página principal (Home).
+- `sobre.html`: Página de currículo com Timeline e Habilidades.
+- `contato.html`: Página de contato.
+- `style.css`: Folha de estilos global.
+- `function.js`: Lógica de scripts e acessibilidade.
+- `img/`: Imagens e assets.
 
 📧 Contato
 Você pode me encontrar através dos links no portfólio ou:
 
-LinkedIn: https://www.linkedin.com/in/pedro-conhasca-599b80216/
+LinkedIn: Pedro Conhasca
 
 Email: conhasca.dev@gmail.com
 

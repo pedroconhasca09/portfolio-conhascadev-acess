@@ -11,9 +11,14 @@
     <title>Pedro Conhasca - Página Inicial</title>
     <!-- Vincula a folha de estilos CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Vincula a biblioteca Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     
+    <!-- Link de acessibilidade para pular navegação -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <!-- Cabeçalho da página -->
     <header>
         <!-- Menu de navegação -->
@@ -21,7 +26,7 @@
             <!-- Checkbox para controle do menu mobile -->
             <input type="checkbox" id="menu-toggle">
             <!-- Ícone do menu hambúrguer -->
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">&#9776;</label>
             <!-- Lista de links de navegação -->
             <ul>
                 <li><a href="index.html">Página Inicial</a></li>
@@ -32,7 +37,7 @@
     </header>
 
     <!-- Conteúdo principal da página -->
-    <main>
+    <main id="main-content">
         <!-- Seção de biografia -->
         <section class="bio-section">
             <h1>Sobre Mim</h1>
@@ -56,5 +61,11 @@
     <footer>
         <p>2026 - Direitos Autorais Reservados - Pedro Conhasca</p>
     </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Script JavaScript externo -->
+    <script src="function.js"></script>
 </body>
 </html>

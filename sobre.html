@@ -11,9 +11,14 @@
     <title>Pedro Conhasca - Sobre</title>
     <!-- Vincula a folha de estilos CSS externa para estilizar a página -->
     <link rel="stylesheet" href="style.css">
+    <!-- Vincula a biblioteca Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     
+    <!-- Link de acessibilidade para pular navegação -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <!-- Cabeçalho da página, geralmente contém o logotipo e a navegação -->
     <header>
         <!-- Elemento de navegação -->
@@ -21,7 +26,7 @@
             <!-- Checkbox oculto para controlar a exibição do menu em dispositivos móveis -->
             <input type="checkbox" id="menu-toggle">
             <!-- Ícone do menu (hambúrguer) que aparece em telas menores -->
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu de navegação">&#9776;</label>
             <!-- Lista de links de navegação -->
             <ul>
                 <li><a href="index.html">Página Inicial</a></li>
@@ -32,37 +37,70 @@
     </header>
 
     <!-- Conteúdo principal da página -->
-    <main>
+    <main id="main-content" class="resume-layout">
         <!-- Seção que descreve a biografia profissional e acadêmica -->
         <section class="bio-section">
             <!-- Título principal da seção -->
             <h1>Trajetória Profissional e Acadêmica</h1>
             <!-- Div que agrupa o texto da biografia -->
-            <div class="bio-text">
-                <!-- Contêiner do carrossel de slides -->
-                <div class="carousel-container">
-                    <!-- Slide 1: Experiência no Hortifruti -->
-                    <div class="carousel-slide fade" style="display: block;">
-                        <img src="img/hortifruti.png" alt="Hortifruti">
-                        <h3>Hortifruti</h3>
+            <div class="timeline">
+                
+                <!-- Item 1: Hortifruti -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <img src="img/hortifruti.png" alt="Hortifruti">
+                                <h3>Hortifruti</h3>
+                            </div>
+                            <span class="timeline-date">2020</span>
+                        </div>
                         <p>Ingressei no mercado de trabalho em 2020, aos 17 anos, atuando em uma grande rede hortifruti, onde construí vínculos profissionais sólidos e desenvolvi importantes soft skills que levo comigo até hoje. Nesse período, tive contato direto com o público e com rotinas do varejo.</p>
                     </div>
-                    <!-- Slide 2: Experiência na Floravista -->
-                    <div class="carousel-slide fade">
-                        <img src="img/Logo-floravista.png" alt="Flora Vista">
-                        <h3>Floravista</h3>
+                </div>
+
+                <!-- Item 2: Floravista -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <img src="img/Logo-floravista.png" alt="Flora Vista">
+                                <h3>Floravista</h3>
+                            </div>
+                            <span class="timeline-date">2021</span>
+                        </div>
                         <p>Em 2021, assumi um novo desafio na Floravista Jardinagem, onde passei pelos setores de vendas e administrativo, ampliando minha visão sobre processos internos e gestão.</p>
                     </div>
-                    <!-- Slide 3: Formação na Universidade La Salle -->
-                    <div class="carousel-slide fade">
-                        <img src="img/logo_lasalle.png" alt="Universidade La Salle">
-                        <h3>Universidade La Salle</h3>
+                </div>
+
+                <!-- Item 3: Universidade La Salle -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <img src="img/logo_lasalle.png" alt="Universidade La Salle">
+                                <h3>Universidade La Salle</h3>
+                            </div>
+                            <span class="timeline-date">2024 - Início</span>
+                        </div>
                         <p>Em 2024, com o objetivo de conquistar melhores oportunidades profissionais, iniciei a graduação em Análise e Desenvolvimento de Sistemas pela Universidade La Salle. Nesse processo, não apenas ampliei minhas perspectivas de carreira, como também desenvolvi um genuíno interesse pela tecnologia e seu impacto social. Durante a graduação, venho adquirindo conhecimentos nas áreas de engenharia de software, qualidade, testes e desenvolvimento de sistemas.</p>
                     </div>
-                    <!-- Slide 4: Estágio na Secretaria de Administração de Niterói -->
-                    <div class="carousel-slide fade">
-                        <img src="img/fme_niteroi.jpeg" alt="FME Niterói">
-                        <h3>Secretaria de Administração de Niterói</h3>
+                </div>
+
+                <!-- Item 4: Secretaria de Administração de Niterói -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <img src="img/fme_niteroi.jpeg" alt="FME Niterói">
+                                <h3>Secretaria de Administração de Niterói</h3>
+                            </div>
+                            <span class="timeline-date">2024 - Estágio</span>
+                        </div>
                         <p>No ano de 2024, também, atuei como estagiário na Prefeitura Municipal de Niterói, onde pude aplicar na prática os conhecimentos adquiridos na faculdade. Essa experiência foi essencial para meu crescimento profissional, permitindo uma compreensão mais aprofundada do papel da Tecnologia da Informação no ambiente corporativo. Minhas atividades incluíram:</p>
                         <ul>
                             <li>Suporte à infraestrutura de TI</li>
@@ -70,16 +108,34 @@
                             <li>Atendimento e suporte ao usuário</li>
                         </ul>
                     </div>
-                    <!-- Slide 5: Experiência na Genesis Academy -->
-                    <div class="carousel-slide fade">
-                        <img src="img/genesis_academy.jpeg" alt="Genesis Academy">
-                        <h3>Genesis Academy</h3>
+                </div>
+
+                <!-- Item 5: Genesis Academy -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <img src="img/genesis_academy.jpeg" alt="Genesis Academy">
+                                <h3>Genesis Academy</h3>
+                            </div>
+                            <span class="timeline-date">Mar 2025</span>
+                        </div>
                         <p>Em março de 2025, ingressei na Genesis Academy como Técnico de TI, participando ativamente da implementação e manutenção dos sistemas de informação da instituição. Atuando diretamente no suporte técnico, solucionando problemas relacionados a hardware, software e redes, garantindo o pleno funcionamento dos recursos tecnológicos utilizados no dia a dia da organização.</p>
                     </div>
-                    <!-- Slide 6: Atuação na FME Niterói -->
-                    <div class="carousel-slide fade">
-                        <img src="img/fme_niteroi.jpeg" alt="FME Niterói (Atual)">
-                        <h3>FME Niterói (Atual)</h3>
+                </div>
+
+                <!-- Item 6: FME Niterói -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <img src="img/fme_niteroi.jpeg" alt="FME Niterói (Atual)">
+                                <h3>FME Niterói (Atual)</h3>
+                            </div>
+                            <span class="timeline-date">Dez 2025 - Atual</span>
+                        </div>
                         <p>Em dezembro de 2025, realizei o objetivo de migrar definitivamente para a área de desenvolvimento de software, passando a atuar na FME – Niterói/RJ. Minhas responsabilidades incluem:</p>
                         <ul>
                             <li>Desenvolvimento e manutenção de aplicações web utilizando Python, Django, PHP, Laravel e SQLite</li>
@@ -89,11 +145,55 @@
                             <li>Participação em todo o ciclo de desenvolvimento, desde a análise de requisitos até testes e deploy</li>
                         </ul>
                     </div>
-
-                    <!-- Controles de navegação do carrossel (anterior e próximo) -->
-                    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- Seção de Cursos e Certificações -->
+        <section class="bio-section">
+            <h1>Cursos e Certificações</h1>
+            <div class="bio-text">
+                <ul class="info-list">
+                    <li>Carreira Alura: Desenvolvedor Back-end em Python (em curso)</li>
+                    <li>Maximize Productivity With AI Tools (Google e Coursera)</li>
+                    <li>Introduction to AI (Google e Coursera)</li>
+                    <li>Curso de Capacitação Profissional: Programação em Python - 168 horas de curso (Senac)</li>
+                    <li>Língua Inglesa (Open English)</li>
+                    <li>Lógica de Programação: praticando com desafios (Alura)</li>
+                    <li>Lógica de Programação: mergulhe em programação com JavaScript (Alura)</li>
+                    <li>Lógica de Programação: explore funções e listas (Alura)</li>
+                    <li>Git e GitHub: compartilhando e colaborando em projetos (Alura)</li>
+                    <li>Começando em Programação: carreira e primeiros passos (Alura)</li>
+                    <li>Imersão Dev: HTML, CSS e JavaScript (Alura)</li>
+                    <li>Informática Avançada (Unova)</li>
+                    <li>Marketing Digital (SEBRAE)</li>
+                    <li>Atendimento e Comércio (ISBET)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção de Habilidades -->
+        <section class="bio-section">
+            <h1>Habilidades</h1>
+            <div class="bio-text">
+                <ul class="info-list skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Bootstrap</li>
+                    <li>Django</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>Full-stack</li>
+                    <li>Lógica de Programação</li>
+                    <li>Rede de Computadores</li>
+                    <li>Sistemas operacionais</li>
+                    <li>Comportamento assertivo</li>
+                    <li>Aprendizado contínuo</li>
+                    <li>Visão empreendedora</li>
+                    <li>Resiliência</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -103,28 +203,10 @@
         <p>2026 - Direitos Autorais Reservados - Pedro Conhasca</p>
     </footer>
 
-    <!-- Script JavaScript para controlar a funcionalidade do carrossel -->
-    <script>
-        // Inicializa o índice do slide atual
-        let slideIndex = 0;
-        // Obtém todos os slides do carrossel
-        const slides = document.getElementsByClassName("carousel-slide");
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
 
-        // Função para avançar ou retroceder os slides
-        function moveSlide(n) {
-            slideIndex += n;
-            // Volta ao primeiro slide se chegar ao final
-            if (slideIndex >= slides.length) {slideIndex = 0}
-            // Vai para o último slide se estiver no primeiro e retroceder
-            if (slideIndex < 0) {slideIndex = slides.length - 1}
-            
-            // Oculta todos os slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            // Exibe apenas o slide atual
-            slides[slideIndex].style.display = "block";  
-        }
-    </script>
+    <!-- Script JavaScript externo -->
+    <script src="function.js"></script>
 </body>
 </html>
